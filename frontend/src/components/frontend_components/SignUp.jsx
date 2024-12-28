@@ -1,12 +1,21 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import axios from 'axios'
 const SignUp = ({ buttonClickHandler }) => {
   const [userInfo, setUserInfo] = useState({ name: "", email: "", password: "" });
 
-  const signUpHandler = (e) => {
+  const signUpHandler = async(e) => {
     e.preventDefault();
     console.log(userInfo);
+    alert("clicked")
+    try {
+      console.log('singup')
+    
+    } 
+    catch (error) {
+      console.log(error)
+    }
+
   };
 
   return (
